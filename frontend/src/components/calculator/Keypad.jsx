@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-function Keypad() {
+function Keypad({ handleButtonClick }) {
   const buttons = [
     "7",
     "8",
@@ -24,7 +24,7 @@ function Keypad() {
     <div className="row row-cols-4 g-2 mt-3">
       {buttons.map((btn) => (
         <div key={btn} className="col">
-          <Button label={btn} onClick={() => console.log(btn)} />
+          <Button label={btn} onClick={() => handleButtonClick(btn)} />
         </div>
       ))}
     </div>
